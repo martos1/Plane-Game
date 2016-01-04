@@ -1,0 +1,78 @@
+@CHARSET "UTF-8";
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: #78A3D6;
+	overflow: hidden;
+}
+
+.stage {
+	position: absolute;
+	background: url(../images/clouds.fw.png);
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+}
+
+#plane{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: url(../images/v2_101x75.png) no-repeat;
+	width: 101px;
+	height: 75px;
+	margin: 0;
+	z-index: 2;
+}
+#enemy{
+	position: absolute;
+	left: 0px;
+	top: 50px;
+	background: url(../images/Airplane.png) no-repeat;
+	width: 100px;
+	height: 100px;
+	z-index: 2;
+}
+
+span {
+	display: block;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background: url(../images/rocket.png) no-repeat;
+	z-index: 2;
+}
+
+#result {
+	display: block;
+	position: absolute;
+	width: 100px;
+	height: 50px;
+	z-index: 2;
+	left: 50%;
+
+}
+ .stage.first {
+	-webkit-animation: hide 4s linear infinite;
+	animation: hide 5s linear infinite;
+}
+
+.stage.second {
+	-webkit-animation: show 4s linear infinite;
+	animation: show 5s linear infinite;
+}
+
+
+ @keyframes hide {
+ 	0% { top: 0%; }
+ 	50% { top: 50%; }
+ 	100% {top: 100%;}
+ }
+ 
+  @keyframes show {
+ 	0% { top: -100%; }
+ 	50% { top: -50%; }
+ 	100% {top: 0%;}
+ }
